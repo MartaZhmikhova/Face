@@ -74,36 +74,40 @@ $(document).ready(function(){
         $("html, body").animate({
             scrollTop: top}, 1000);
     });
-
     $(".web_carousel").owlCarousel({
         items: 1,
         loop: true,
-        autoPlay: 5000,
+        autoplay:true,
+        autoplayTimeout:20000,
         nav: true,
         navText: ['<i class="fa fa-angle-left" ></i>','<i class="fa fa-angle-right"></i>']
     });
     $(".project_carousel").owlCarousel({
       items: 1,
       dots: true,
-      autoPlay: 5000,
+      autoplay:true,
+        autoplayTimeout:5000,
       loop: true
     });
     $(".do_carousel").owlCarousel({
       items: 1,
       dots: true,
-      autoPlay: 5000,
+      autoplay:true,
+        autoplayTimeout:4000,
       loop: true
     });
     $(".do_carousel_2").owlCarousel({
       items: 1,
       dots: true,
-      autoPlay: 5000,
+      autoplay:true,
+        autoplayTimeout:4000,
       loop: true
     });
     $(".feedback_carousel").owlCarousel({
       items: 1,
       loop: true,
-      autoPlay: 5000,
+      autoplay:true,
+        autoplayTimeout:10000,
       nav: true,
       navText: ['<i class="fa fa-angle-left" ></i>','<i class="fa fa-angle-right"></i>']
     });
