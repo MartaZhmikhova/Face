@@ -350,10 +350,10 @@ header {
               -o-transition: .5s ease;
               transition: .5s ease; }
               header .top-menu .menu .nav-panel li #form .tab-group li a:hover {
-                background: #1ab188;
+                background: #006cff;
                 color: #fff; }
             header .top-menu .menu .nav-panel li #form .tab-group li.active a {
-              background: #1ab188;
+              background: #006cff;
               color: #fff; }
         header .top-menu .menu .nav-panel li #form .tab-content > div:last-child {
           display: none; }
@@ -375,7 +375,7 @@ header {
           font-size: 22px; }
           header .top-menu .menu .nav-panel li #form label .req {
             margin: 2px;
-            color: #1ab188; }
+            color: #006cff; }
           header .top-menu .menu .nav-panel li #form label.active {
             -webkit-transform: translateY(50px);
                 -ms-transform: translateY(50px);
@@ -405,7 +405,7 @@ header {
           transition: border-color .25s ease, box-shadow .25s ease, -webkit-box-shadow .25s ease; }
         header .top-menu .menu .nav-panel li #form input:focus, header .top-menu .menu .nav-panel li #form textarea:focus {
           outline: 0;
-          border-color: #1bb188; }
+          border-color: #006cff; }
         header .top-menu .menu .nav-panel li #form textarea {
           border: 2px solid #a0b3b0;
           resize: vertical; }
@@ -430,14 +430,14 @@ header {
           padding: 15px 0;
           font-size: 16px;
           text-transform: uppercase;
-          background: #1ab188;
+          background: #006cff;
           color: #fff;
           -webkit-transition: all 0.5s ease;
           -o-transition: all 0.5s ease;
           transition: all 0.5s ease;
           -webkit-appearance: none; }
           header .top-menu .menu .nav-panel li #form .button:hover, header .top-menu .menu .nav-panel li #form .button:focus {
-            background: #179b77; }
+            background: #006CB5; }
         header .top-menu .menu .nav-panel li #form .button-block {
           display: block;
           width: 100%; }
