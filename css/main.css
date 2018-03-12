@@ -270,7 +270,7 @@ header {
             left: 0;
             width: 0;
             height: 1px;
-            background: #006cff;
+            background: #333;
             -webkit-transition: 1s;
             -o-transition: 1s;
             transition: 1s; }
@@ -283,7 +283,8 @@ header {
               width: 100%;
               -webkit-transition: 1s;
               -o-transition: 1s;
-              transition: 1s; }
+              transition: 1s;
+              background: #006cff; }
       header .top-menu .menu .nav-panel li:first-child {
         margin: 0 25px; }
       header .top-menu .menu .nav-panel li a, header .top-menu .menu .nav-panel li span {
@@ -996,7 +997,6 @@ section, footer {
           margin: 4px auto; }
     .do_carousel_2 .owl-dots .active {
       border: 1px solid #333;
-      float: right;
       margin-left: 15px; }
       .do_carousel_2 .owl-dots .active span {
         background-color: #333;
@@ -1286,11 +1286,11 @@ section, footer {
         margin-top: 16px; }
       .teams .team .team_text .p_text {
         margin: 30px 0; }
-      .teams .team .team_text .about_author_social .about_author_social_link {
-        display: block;
-        float: none;
-        margin-top: 20px; }
-    .teams .team:hover .about_author_social .about_author_social_link {
+        .about_author_social_link{
+          display: none;
+          transition: 1s;
+        }
+    .teams .team:hover .about_author_social_link {
       background-color: #006cff;
       display: inline-block;
       float: none;
@@ -1300,12 +1300,13 @@ section, footer {
       padding: 10px;
       cursor: pointer;
       z-index: 12;
-      text-align: center; }
-      .teams .team:hover .about_author_social .about_author_social_link a {
+      text-align: center;
+    transition: 1s;}
+      .teams .team:hover .about_author_social_link a {
         color: #fff;
         display: block;
         margin: 10px 0; }
-        .teams .team:hover .about_author_social .about_author_social_link a:hover {
+        .teams .team:hover .about_author_social_link a:hover {
           color: #fff;
           font-size: 16px; }
 
@@ -1434,7 +1435,7 @@ footer {
     margin-right: 0;
     padding: 0 20px;
     margin-bottom: 40px; }
-    .teams .team:hover .about_author_social .about_author_social_link {
+    .teams .team:hover .about_author_social_link {
       display: inline-block;
       float: right;
       top: 0;
@@ -1506,7 +1507,12 @@ footer {
       right: auto;
       left: 0; }
   .partners .partner {
-    margin: 0 20px; } }
+    margin: 0 20px; }
+  .feedback_carousel .section_title,
+  .feedback_carousel .feedback_slaider_text{
+    padding-left: 30px;
+  }
+  }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
@@ -1582,7 +1588,11 @@ footer {
     footer .copy {
       margin-top: 0; }
   .number_kards .number_kard {
-    width: 100%; } }
+    width: 100%; }
+    .feedback_carousel .feedback_slaider_text{
+      padding-left: 10px;
+    }
+  }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {

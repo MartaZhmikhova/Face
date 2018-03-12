@@ -41,20 +41,9 @@ $(document).ready(function(){
     });
 
 //search
-
-
-      if ($(".search").css("display","none")){
-        $("span .fa-search").click(function( event){
-          $(".search").css("display","inline-block");
-          event.preventDefault();
-          if ($(".search").css("display","inline-block")) {
-            $("span .fa-search").click(function( event){
-              $(".search").css("display","none");
-              event.preventDefault();
-            });
-          }
+        $("span .fa-search").click(function(){
+          $(".search").slideToggle();
         });
-      }
 
       $( ".search" ).submit(function( event ) {
           $('.thank-you-message').css('display', 'inline-block');
