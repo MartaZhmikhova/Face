@@ -19,14 +19,109 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+<noscript>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
+</noscript>
+<link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="libs/font-awesome/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<style>
+/*preload*/
+@keyframes loader {
+	0%, 10%, 100% {
+		width: 80px;
+		height: 80px;
+	}
+	65% {
+		width: 150px;
+		height: 150px;
+	}
+}
+@keyframes loaderBlock {
+	0%, 30% {
+		transform: rotate(0);
+	}
+	55% {
+		background-color: #F37272;
+	}
+	100% {
+		transform: rotate(90deg);
+	}
+}
+@keyframes loaderBlockInverse {
+	0%, 20% {
+		transform: rotate(0);
+	}
+	55% {
+		background-color: #F37272;
+	}
+	100% {
+		transform: rotate(-90deg);
+	}
+}
+.loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80px;
+	height: 80px;
+	transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+	animation: loader 1.2s infinite ease-in-out;
+}
+.loader span {
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: #EE4040;
+	animation: loaderBlock 1.2s infinite ease-in-out both;
+}
+.loader span:nth-child(1) {
+	top: 0;
+	left: 0;
+}
+.loader span:nth-child(2) {
+	top: 0;
+	right: 0;
+	animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+.loader span:nth-child(3) {
+	bottom: 0;
+	left: 0;
+	animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+.loader span:nth-child(4) {
+	bottom: 0;
+	right: 0;
+}
+.wrap_loader{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 9999;
+}
+.loaded{
+	display: none;
+}
+</style>
 </head>
 <body>
+<div class="wrap_loader">
+	<div class="loader">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+</div>
 <div class="overlay js-overlay-campaign">
 	<div class="popup js-popup-campaign">
 		All the materials on the website is a work of fiction. This website is done purely to showcase our front-end skills. Names, characters, businesses, places, events and incidents are either the products of our imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.
@@ -618,7 +713,7 @@
 								</div>
 								<div class="about_author_social">
 									<span>Website:</span>
-									<a href="http://pozitiff.cz/" class="autor_website">pozitiff.cz</a>
+									<a href="http://pozitiff.site/" class="autor_website">pozitiff</a>
 									<a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 									<a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 									<a href="https://plus.google.com/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
@@ -645,7 +740,7 @@
 								</div>
 								<div class="about_author_social">
 									<span>Website:</span>
-									<a href="http://pozitiff.cz/" class="autor_website">pozitiff.cz</a>
+									<a href="http://pozitiff.site/" class="autor_website">pozitiff</a>
 									<a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 									<a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 									<a href="https://plus.google.com/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
@@ -672,7 +767,7 @@
 								</div>
 								<div class="about_author_social">
 									<span>Website:</span>
-									<a href="http://pozitiff.cz/" class="autor_website">pozitiff.cz</a>
+									<a href="http://pozitiff.site/" class="autor_website">pozitiff</a>
 									<a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 									<a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 									<a href="https://plus.google.com/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
@@ -699,7 +794,7 @@
 								</div>
 								<div class="about_author_social">
 									<span>Website:</span>
-									<a href="http://pozitiff.cz/" class="autor_website">pozitiff.cz</a>
+									<a href="http://pozitiff.site/" class="autor_website">pozitiff</a>
 									<a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 									<a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 									<a href="https://plus.google.com/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
@@ -737,7 +832,7 @@
 							<p class="p_text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
 							<div class="about_author_social clearfix">
 								<span>Website:</span>
-								<a href="http://pozitiff.cz/" class="autor_website">pozitiff.cz</a>
+								<a href="http://pozitiff.site/" class="autor_website">pozitiff</a>
 							</div>
 						</div>
 						<div class="about_author_social_link">
@@ -759,7 +854,7 @@
 							<p class="p_text">Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, going undoubtable source</p>
 							<div class="about_author_social clearfix">
 								<span>Website:</span>
-								<a href="http://pozitiff.cz/" class="autor_website">pozitiff.cz</a>
+								<a href="http://pozitiff.site/" class="autor_website">pozitiff</a>
 							</div>
 						</div>
 						<div class="about_author_social_link">
@@ -781,7 +876,7 @@
 							<p class="p_text">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise</p>
 							<div class="about_author_social clearfix">
 								<span>Website:</span>
-								<a href="http://pozitiff.cz/" class="autor_website">pozitiff.cz</a>
+								<a href="http://pozitiff.site/" class="autor_website">pozitiff</a>
 							</div>
 						</div>
 						<div class="about_author_social_link">
@@ -797,7 +892,9 @@
 	</div>
 </section>
 <footer>
-	<p class="copy"><a href="https://pozitiff.cz">Copyright &copy; 2018 - pozitiff.cz</a><br>Marta Zhmikhova</p>
+	<p><a href="http://pozitiff.site/">Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> - pozitiff</a>
+							<br> <a href="https://www.upwork.com/fl/martazhmikhova">Marta Zhmikhova</a>
+							</p>
 </footer>
 <div class="top" title="Up"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
 
@@ -808,6 +905,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 	<script src="js/commond.js"></script>
-
+	<script defer>
+	!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!o.rel||"style"!o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+	</script>
 </body>
 </html>
